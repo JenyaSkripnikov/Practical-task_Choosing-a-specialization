@@ -46,6 +46,19 @@ Console.WriteLine();
     }
 }
 
+void PrintArraySecond(string[] arrayFirstIntroduced)
+{
+    for (int i = 0; i < arrayFirstIntroduced.Count(); i++)
+    {
+        if(arrayFirstIntroduced[i].Length < 4)
+        Console.Write($"[{arrayFirstIntroduced[i]}] ");;
+    }
+}
+
 int elementsCount = GetElements("Введите количество элементов массива:\t");
 string[] arrayFirstIntroduced = new string[elementsCount];
 PrintArrayFirstIntroduced(arrayFirstIntroduced);
+Console.WriteLine();
+Console.WriteLine($"Элементы введенного массива, длина которых меньше, либо равна трём символам, следующие:");
+PrintArraySecond(arrayFirstIntroduced);
+Console.WriteLine();
